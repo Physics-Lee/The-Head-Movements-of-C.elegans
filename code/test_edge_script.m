@@ -1,7 +1,8 @@
 start_frame = 1;
-end_frame = numel(mcd);
+end_frame = numel(10);
+% end_frame = numel(mcd);
 % test_edge(mcd,start_frame,end_frame);
-% plot_the_C_elegan(mcd,start_frame,end_frame);
+plot_the_C_elegan(mcd,start_frame,end_frame);
 [centerline_all,boundary_A_all,boundary_B_all] = get_centerlines_v2(mcd,start_frame,end_frame);
 
 x_max = [];
