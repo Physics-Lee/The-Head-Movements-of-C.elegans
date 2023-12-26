@@ -11,7 +11,6 @@ create_folder(folder_path);
 
 for i = start_frame:end_frame
 
-
     %% absolut reference frame
     centerline = convert_coordinates_and_add_stage_position(mcd(i).SegmentedCenterline, mcd(i).StagePosition);
     boundary_A = convert_coordinates_and_add_stage_position(mcd(i).BoundaryA, mcd(i).StagePosition);
@@ -26,21 +25,6 @@ for i = start_frame:end_frame
     file_path = fullfile(folder_path,file_name);
     saveas(gcf,file_path)
     close;
-
-    %% relative reference frame
-    % centerline = get_pixel_coordinates_in_the_video(mcd(i).SegmentedCenterline);
-    % boundary_A = get_pixel_coordinates_in_the_video(mcd(i).BoundaryA);
-    % boundary_B = get_pixel_coordinates_in_the_video(mcd(i).BoundaryB);
-    % 
-    % plot_3_curve(centerline,boundary_A,boundary_B);
-    % xlabel("x (pixel)");
-    % ylabel("y (pixel)");
-    % title("Relative Reference Frame");
-    % 
-    % file_name = sprintf("frame_%d_relative.png",i);
-    % file_path = fullfile(folder_path,file_name);
-    % saveas(gcf,file_path)
-    % close;
 
 end
 

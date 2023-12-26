@@ -1,3 +1,6 @@
+%% load your mcd
+
+%% plot the C.elegan
 addpath("utils")
 start_frame = 19700;
 end_frame = 19710;
