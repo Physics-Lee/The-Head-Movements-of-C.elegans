@@ -1,7 +1,7 @@
 dbstop if error;
 clc;clear;close all;
 
-%% load your mcd
+%%
 path = uigetdir;
 list = get_all_files_of_a_certain_name_pattern_in_a_rootpath(path,"*mcd_corrected.mat");
 [indx,tf] = listdlg('ListString',list,'ListSize',[800,600],'Name','Choose files');
