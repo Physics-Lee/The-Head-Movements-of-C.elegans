@@ -4,7 +4,7 @@ global pixel2um unit2um
 pixel2um = 1.6835;
 unit2um = 0.05;
 
-root_folder_path = 'D:\Desktop';
+root_folder_path = uigetdir;
 folder_name = ['from_' num2str(start_frame) '_to_' num2str(end_frame)];
 folder_path = fullfile(root_folder_path,folder_name);
 create_folder(folder_path);
