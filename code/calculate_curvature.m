@@ -87,6 +87,9 @@ plot_psd_of_imfs(imf, time, curvature_of_centerline_all)
 %% Hausdorff distance calculation and plot
 plot_hausdorff_distance(imf, curvature_of_head)
 
+%% compare ch and cb to know who is the low frequency part
+compare_head_body(curvature_of_head, curvature_of_body);
+
 %% save
 save_all_figures;
 
