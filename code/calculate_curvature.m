@@ -67,7 +67,7 @@ xlabel('frames');
 ylabel('curvature*L');
 title('curvature of head')
 
-imf_high_f = imf(:,2) + imf(:,3) + imf(:,4); % 1 is noise, so just 2+3+4
+% imf_high_f = imf(:,2) + imf(:,3) + imf(:,4); % 1 is noise, so just 2+3+4
 imf_low_f = imf(:,5);
 
 %% imf 5 vs curvature of the boday

@@ -27,4 +27,5 @@ for i = indx
 
     %% get the curvature
     curvature_of_head = calculate_curvature(mcd, start_frame, end_frame);
+    
 end
