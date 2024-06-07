@@ -48,7 +48,7 @@ legend('curvature of head','curvature of body');
 %% vmd of the head
 
 % vmd
-[imf, residual, info] = vmd(curvature_of_head); % Variational mode decomposition
+[imf, ~, ~] = vmd(curvature_of_head); % Variational mode decomposition
 
 % plot each imf
 figure;

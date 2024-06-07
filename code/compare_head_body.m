@@ -19,7 +19,7 @@ body_dynamics = body_dynamics - mean(body_dynamics);
 
 D = zeros(3,1);
 figure;
-for j=1:3
+for j = 1:3
     C = xcorr(body_dynamics, lf_template(:,j));
     [~,lag] = max(C(N:end));
 
@@ -42,6 +42,14 @@ for j=1:3
     xlabel("frame");
     ylabel("Normalized curvature");
     legend('body','head');
+    switch j
+        case 1
+            title("IMF 5");
+        case 2
+            title("IMF 5 + IMF 4");
+        case 3
+            title("IMF 5 + IMF 4 + IMF 3");
+    end
 end
 
 [~,I] = min(D);
