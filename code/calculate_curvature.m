@@ -48,7 +48,7 @@ legend('curvature of head','curvature of body');
 %% vmd of the head
 
 % vmd
-[imf, ~, ~] = vmd(curvature_of_head); % Variational mode decomposition
+[imf, residual, info] = vmd(curvature_of_head); % Variational mode decomposition
 
 % plot each imf
 figure;
@@ -60,12 +60,15 @@ for i = 1:length(imf(1,:))
     ylabel('curvature*L');
 end
 
-% plot original signal
+% plot residual
 subplot(3,2,6)
-plot(curvature_of_head, 'r');
-xlabel('frames');
+plot(time, residual);
+xlabel('time (s)');
 ylabel('curvature*L');
-title('curvature of head')
+title('residual')
+
+%
+disp(info);
 
 % imf_high_f = imf(:,2) + imf(:,3) + imf(:,4); % 1 is noise, so just 2+3+4
 imf_low_f = imf(:,5);
@@ -91,6 +94,6 @@ plot_hausdorff_distance(imf, curvature_of_head)
 compare_head_body(curvature_of_head, curvature_of_body);
 
 %% save
-save_all_figures;
+% save_all_figures;
 
 end

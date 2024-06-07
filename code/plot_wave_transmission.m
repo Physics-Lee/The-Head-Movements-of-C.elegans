@@ -3,7 +3,7 @@ function plot_wave_transmission(curvature_of_centerline_all, time)
 % smooth
 timefilter = 5; % filter along y axis
 bodyfilter = 10; % filter along x axis
-magnification = 100;
+magnification = 1;
 h = fspecial('average', [timefilter bodyfilter]); % The algorithmic average value of the neighborhood around each pixel was calculated to smooth the data
 curvdatafiltered = imfilter(curvature_of_centerline_all*magnification,  h , 'replicate'); % N-D filtering of multidimensional images
 
@@ -17,7 +17,7 @@ cmap(:,3)=cmap(:,2);
 cmap(:,2)=0;
 colormap(cmap);
 colorbar;
-clim([-10 10]);
+clim([-0.1 0.1]);
 
 % decorate
 hold on;
