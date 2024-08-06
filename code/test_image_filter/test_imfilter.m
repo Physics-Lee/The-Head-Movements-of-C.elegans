@@ -4,7 +4,7 @@ timefilter = 1000;
 bodyfilter = 1000;
 magnification = 1;
 h = fspecial('average', [timefilter bodyfilter]); % The algorithmic average value of the neighborhood around each pixel was calculated to smooth the data
-image_data_filtered = imfilter(image_data*magnification,  h , 'replicate'); % N-D filtering of multidimensional images
+image_data_filtered = imfilter(image_data * magnification,  h , 'replicate'); % N-D filtering of multidimensional images
 
 figure;
 imshow(image_data);
